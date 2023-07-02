@@ -1,38 +1,30 @@
+const productService = require("../services/product.service")
+
 const routes = [
   {
     url: "/products",
     method: "GET",
-    handler: (request, reply) => {
-      reply.send("products");
-    },
+    handler: productService.getProducts
   },
   {
     url: "/products/:id",
     method: "GET",
-    handler: (request, reply) => {
-      reply.send("single product");
-    },
+    handler: productService.getProduct
   },
   {
     url: "/products",
     method: "POST",
-    handler: (request, reply) => {
-      reply.send("create product");
-    },
+    handler: productService.createProduct
   },
   {
     url: "/products/:id",
     method: "DELETE",
-    handler: (request, reply) => {
-      reply.send("deleting a product");
-    },
+    handler: productService.deleteProduct
   },
   {
     url: "/products/:id",
     method: "PATCH",
-    handler: (request, reply) => {
-      reply.send("updating a product");
-    },
+    handler: productService.updateProduct
   },
 ];
 

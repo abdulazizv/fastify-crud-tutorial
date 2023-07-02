@@ -4,6 +4,8 @@ const fastify = require("fastify")({
 
 const productRoutes = require("./routes/product.routes");
 
+require('./utils/database/connection/connection')
+
 fastify.get("/", (request, reply) => {
   reply.send({ hello: "world" });
 });
