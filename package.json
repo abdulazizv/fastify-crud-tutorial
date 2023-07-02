@@ -4,6 +4,8 @@
   "description": "Learn fastify crud",
   "main": "src/index.js",
   "dependencies": {
+    "@fastify/static": "^5.0.0",
+    "@fastify/swagger": "^7.0.0",
     "abort-controller": "^3.0.0",
     "abstract-logging": "^2.0.1",
     "ajv": "^8.12.0",
@@ -79,7 +81,7 @@
     "yallist": "^4.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.22"
+    "nodemon": "^1.14.9"
   },
   "scripts": {
     "test": "nodemon src/index.js"

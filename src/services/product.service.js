@@ -28,7 +28,7 @@ async function deleteProduct(request,reply) {
 }
 
 async function updateProduct(request,reply) {
-    const newPr = await Product.findByIdAndUpdate(request.params.id,request.body);
+    const newPr = await Product.findByIdAndUpdate(request.params.id,request.body,{new: true});
     return reply.code(202).send(newPr)
 
 }

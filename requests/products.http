@@ -3,10 +3,14 @@
 ### GET /products
 GET {{api}}
 
+### create product
 POST {{api}}
 
+### update product
 PATCH {{api}}/1
 
+### delete product
 DELETE {{api}}/1
 
+### get product
 GET {{api}}/1

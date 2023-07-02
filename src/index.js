@@ -3,8 +3,13 @@ const fastify = require("fastify")({
 });
 
 const productRoutes = require("./routes/product.routes");
+const swagger = require('./utils/swagger/swagger')
 
 require('./utils/database/connection/connection')
+
+
+const fastifySwagger = require('@fastify/swagger')
+fastify.register(fastifySwagger,swagger.option)
 
 fastify.get("/", (request, reply) => {
   reply.send({ hello: "world" });
